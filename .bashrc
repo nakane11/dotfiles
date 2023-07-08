@@ -115,11 +115,13 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
-source /opt/ros/melodic/setup.bash
+source /opt/ros/noetic/setup.bash
 
 source `catkin locate --shell-verbs` ## enable catkin source
 
-export PATH="/usr/lib/cuda/bin:$PATH"
-export LD_LIBRARY_PATH="/usr/lib/cuda/lib64:$LD_LIBRARY_PATH"
+export PATH="/usr/local/cuda/bin:$PATH"
+export LD_LIBRARY_PATH="/usr/local/cuda/lib64:$LD_LIBRARY_PATH"
 export TERM=xterm
 export EDITOR="emacs -nw"
+
+rossetip
